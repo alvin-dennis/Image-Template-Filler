@@ -1,6 +1,7 @@
 // app/page.js
-import ImageTemplateFillerApp from './ImageTemplateFillerApp';
+import UploadCSV from '../components/UploadCSV';
+import './page.module.css';
 
 export default function Home() {
-  return <ImageTemplateFillerApp />;
+  return <UploadCSV />;
 }

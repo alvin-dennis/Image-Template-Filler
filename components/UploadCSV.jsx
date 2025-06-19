@@ -1,10 +1,9 @@
-/* ImageTemplateFillerApp.jsx */
 "use client";
 
 import React, { useState } from 'react';
 import Papa from 'papaparse';
 
-export default function ImageTemplateFillerApp() {
+export default function UploadCSV() {
   const [csvData, setCsvData] = useState([]);
   const [previewImageUrl, setPreviewImageUrl] = useState('/placeholder-image.svg'); // Placeholder for now
 
