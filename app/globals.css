@@ -1,13 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
 
 :root {
-  --font-geist-sans: 'Geist', sans-serif;
-  --font-geist-mono: 'Geist Mono', monospace;
   --background: #ffffff;
   --foreground: #171717;
-  
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,33 +13,13 @@
   }
 }
 
-html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-  font-family: var(--font-geist-sans); /* Keep only this one */
+  background-color: var(--background);
   color: var(--foreground);
-  background: var(--background);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  body {
-  background: var(--background);
-  color: var(--foreground);
-}}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+/* Optional: override file input default */
+input[type="file"] {
+  @apply bg-gray-100 border border-gray-300 rounded-md p-3 w-full text-sm text-gray-700 cursor-pointer mb-4;
 }
